@@ -1,3 +1,9 @@
+#### 3.2.1 (2024-02-03)
+
+##### Bug Fixes
+
+*  correct handling of the 'caseSensitive' property ([3ea2a12c](https://github.com/josuerf/verdaccio-gitlab/commit/3ea2a12c453c7ec2f02f2d4b701c2780435966d4))
+
 ### 3.2.0 (2024-02-03)
 
 ##### Chores
