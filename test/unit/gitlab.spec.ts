@@ -263,7 +263,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       groupsStrategy: {
-        caseSensitive: true,
+        caseSensitive: false,
         searchPath: 'path'
       }
     };
@@ -295,7 +295,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       projectsStrategy: {
-        caseSensitive: true,
+        caseSensitive: false,
         mappings: [
           { gitlabName: 'Lib.Name', packageJsonName: 'libName' }
         ]
@@ -329,7 +329,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       projectsStrategy: {
-        caseSensitive: true
+        caseSensitive: false
       }
     };
     const userWithDifferentGroups: RemoteUser = {
@@ -403,7 +403,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       projectsStrategy: {
-        caseSensitive: true,
+        caseSensitive: false,
         mappings: [
           { gitlabName: 'Lib.Name', packageJsonName: 'libName' }
         ]
@@ -437,7 +437,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       projectsStrategy: {
-        caseSensitive: true
+        caseSensitive: false
       }
     };
     const userWithDifferentGroups: RemoteUser = {
@@ -468,7 +468,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       groupsStrategy: {
-        caseSensitive: true,
+        caseSensitive: false,
         searchPath: 'path',
         mappings: [
           { gitlabName: 'SubGroup1', packageJsonName: 'subGroup' }
@@ -503,7 +503,7 @@ describe('Gitlab Auth Plugin Unit Tests', () => {
       ...config.verdaccioGitlabConfig,
       groupSearchStrategy: 'nameMapping',
       groupsStrategy: {
-        caseSensitive: true,
+        caseSensitive: false,
         searchPath: 'path'
       }
     };

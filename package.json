@@ -1,5 +1,5 @@
 {
-  "name": "verdaccio-gitlab",
+  "name": "verdaccio-gitlab-v2",
   "author": {
     "name": "Roger Meier",
     "email": "roger@bufferoverflow.ch"
@@ -45,11 +45,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bufferoverflow/verdaccio-gitlab.git"
+    "url": "https://github.com/josuerf/verdaccio-gitlab"
   },
-  "homepage": "https://github.com/bufferoverflow/verdaccio-gitlab",
+  "homepage": "https://github.com/josuerf/verdaccio-gitlab",
   "bugs": {
-    "url": "https://github.com/bufferoverflow/verdaccio-gitlab/issues"
+    "url": "https://github.com/josuerf/verdaccio-gitlab/issues"
   },
   "engines": {
     "node": ">=12.18"

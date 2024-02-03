@@ -124,7 +124,7 @@ export default class VerdaccioGitLab implements IPluginAuth<VerdaccioGitlabConfi
 
         const groupsPromise = GitlabAPI.Groups.all(gitlabPublishQueryParams).then(groups => {
           return groups.filter(group => group.path === group.full_path || this.config.groupsStrategy).map(group =>
-            this.config.groupsStrategy?.caseSensitive
+            !(this.config.groupsStrategy?.caseSensitive ?? true)
               ? group[groupSearchPath]?.toLowerCase() ?? ''
               : group[groupSearchPath] ?? ''
           );
@@ -132,7 +132,7 @@ export default class VerdaccioGitLab implements IPluginAuth<VerdaccioGitlabConfi
 
         const projectsPromise = GitlabAPI.Projects.all(gitlabPublishQueryParams).then(projects => {
           return projects.map(project =>
-            this.config.projectsStrategy?.caseSensitive
+            !(this.config.projectsStrategy?.caseSensitive ?? true)
               ? project[projectSearchPath].toLowerCase() ?? ''
               : project[projectSearchPath] ?? ''
             );

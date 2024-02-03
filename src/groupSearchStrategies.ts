@@ -23,7 +23,7 @@ function nameMappingStrategy(splitRealGroup: string[], splitPackageName: string[
   const projectsMapping = config.projectsStrategy?.mappings;
 
   const treatLowerCase = (source: string, caseSensitive: boolean) => (
-    caseSensitive && source
+    !caseSensitive && source
       ? source.toLowerCase()
       : source
   );
@@ -32,13 +32,13 @@ function nameMappingStrategy(splitRealGroup: string[], splitPackageName: string[
   const realGroupOrProjectName = splitRealGroup[splitRealGroup.length - 1];
 
   for (const packageNamePart of splitPackageName) {
-    let caseSensitive = config.groupsStrategy?.caseSensitive ?? config.projectsStrategy?.caseSensitive ?? false;
+    let caseSensitive = config.groupsStrategy?.caseSensitive ?? config.projectsStrategy?.caseSensitive ?? true;
 
     if (treatLowerCase(packageNamePart, caseSensitive) === treatLowerCase(realGroupOrProjectName, caseSensitive)) {
       return true;
     }
 
-    caseSensitive = config.groupsStrategy?.caseSensitive ?? false;
+    caseSensitive = config.groupsStrategy?.caseSensitive ?? true;
 
     const matchedGroup = groupsMapping?.find(groupMapping =>
       treatLowerCase(groupMapping.gitlabName, caseSensitive) === treatLowerCase(realGroupOrProjectName, caseSensitive)
@@ -51,7 +51,7 @@ function nameMappingStrategy(splitRealGroup: string[], splitPackageName: string[
       return true;
     }
 
-    caseSensitive = config.projectsStrategy?.caseSensitive ?? false;
+    caseSensitive = config.projectsStrategy?.caseSensitive ?? true;
 
     const matchedPackageJsonName = projectsMapping?.find(project =>
       treatLowerCase(project.packageJsonName, caseSensitive) === treatLowerCase(packageNamePart, caseSensitive)
