@@ -110,7 +110,7 @@ user successfully authenticated can access all packages.
 We have two matching strategies between the package name and the name
 of GitLab groups and projects, the 'default' and 'nameMapping' strategies.
 
-####*publish* with "default" strategy is allowed if:
+#### *publish* with "default" strategy is allowed if
 
 1. the package name matches the GitLab username, or
 2. if the package name or scope of the package matches one of the
@@ -146,9 +146,10 @@ Then this user would be able to:
 
 There would be an error if the user tried to publish any package under `@group2/**`.
 
-#####*publish* with "nameMapping" strategy:
+##### *publish* with "nameMapping" strategy
 
 The same rules apply, but with some differences:
+
 - In cases where the scope or project name in the package is different from
 the group or project in GitLab, it is possible to define
 the mapping for these names.
