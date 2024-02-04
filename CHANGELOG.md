@@ -1,3 +1,13 @@
+#### 3.2.2 (2024-02-04)
+
+##### Documentation Changes
+
+*  adjusted readme style conventions ([b3afa40f](https://github.com/josuerf/verdaccio-gitlab/commit/b3afa40fa056a39387acc44f77e8bdc3f9671016))
+
+##### Bug Fixes
+
+*  updated lib types and readme ([b1b9365a](https://github.com/josuerf/verdaccio-gitlab/commit/b1b9365acc935f3632eeab9a7d63d449eaa21639))
+
 #### 3.2.1 (2024-02-03)
 
 ##### Bug Fixes
